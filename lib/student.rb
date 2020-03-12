@@ -11,7 +11,7 @@ attr_reader :id
   end
   
   def self.create_table
-    sql = %Q SQL
+    sql = %Q(
     CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY,
     name TEXT,
@@ -19,5 +19,6 @@ attr_reader :id
     )
     SQL 
     DB[:conn].exicute(sql)
+    )
   end
 end
